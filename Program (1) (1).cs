@@ -30,13 +30,13 @@ namespace SydneyCoffee
                 Console.Write("Enter customer name: ");
                 customer.Name = Console.ReadLine();
 
-                customer.Quantity = GetValidQuantity();
+                customer.Quality = GetValidQuantity();
 
                 Console.Write("Enter yes/no to indicate whether you are a reseller: ");
                 customer.IsReseller = Console.ReadLine().ToLower() == "yes";
 
                 // Calculate charge
-                customer.Charge = CalculateCharge(customer.Quantity, customer.IsReseller);
+                customer.Chance = CalculateCharge(customer.Quantity, customer.IsReseller);
 
                 Console.WriteLine($"The total sales value from {customer.Name} is ${customer.Charge:F2}");
                 Console.WriteLine("-----------------------------------------------------------------------------");
